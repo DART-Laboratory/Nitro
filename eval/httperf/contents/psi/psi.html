@@ -1,0 +1,125 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<title>Secure Systems Lab -- Software: BinCFI</title>
+</head><body>
+<div id="topstrip">
+<table width="100%" cellspacing=0 cellpadding=0>
+<tr>
+   <td width=240>
+      <a href="http://www.sunysb.edu"><img src="../images/SBn.gif" alt="Stony Brook University Logo"></a>
+   </td>
+   <td align="right" style="padding-right: 20px">
+       <a href="http://www.cs.sunysb.edu"><img src="../images/dcs.gif" alt="Department of Computer Science"></a>
+   </td>
+   <td width=90>
+     <a href="http://www.stonybrook.edu/sb/search.shtml">
+       <img src="../images/search.gif" alt="Stony Brook Search Button"></a>
+   </td>
+</tr>
+</table>
+</div>
+
+<table width="100%" bgcolor="#ffffff" height="1" cellpadding=0 cellspacing=0><tr><td></td></tr></table>
+
+<div id="logobar">
+<table cellpadding="6" cellspacing="6"><tr><td> <a href="../index.html"><img src="../images/baselogo00.gif" alt="Secure Systems Lab"></a></td></tr></table>
+</div>
+
+<div id="nav">
+<table>
+<tr >
+   <td><a href="../research.html">Research</a></td>
+   <td><a href="../publications.html">Publications</a></td>
+   <td> <a href="../download.html">Software</a></td>
+   <td> <a href="../people.html">People</a></td>
+   <td> <a href="../joinus.html">Join Us</a></td>
+   <td> <a href="../education.html">Education</a></td>
+   <td> <a href="../faq.html">FAQ</a></td>
+   <td> <a href="../intranet/index.html">Intranet</a></td>
+</tr>
+</table>
+</div>
+
+<!--- end of header.html -->
+<table width="100%"><tr><td><div id="main">
+
+<h2 align="center">PSI: A Platform for Secure Static Binary Instrumentation</h2>
+   
+<center>
+See our VEE 2014 <a href="http://seclab.cs.sunysb.edu/seclab/pubs/vee14.pdf">
+paper</a> for an overview of this approach.
+</center>
+<hr>
+
+<h2><a>Introduction</a></h2> Program instrumentation techniques form the basis
+of many recent software security defenses, including defenses against common
+exploits and security policy enforcement. As compared to source-code
+instrumentation, binary instrumentation is easier to use and more broadly
+applicable due to theready availability of binary code. Two key features
+neededfor security instrumentations are (a) it should be applied to all
+application code, including code contained in various system and application
+libraries, and (b) it should be non-bypassable. So far, dynamic binary
+instrumentation (DBI) techniques have provided these features, whereas static
+bi-nary instrumentation (SBI) techniques have lacked them.These features,
+combined with ease of use, have made DBI the de facto choice for security
+instrumentations. However,DBI techniques can incur high overheads in several
+commonusage scenarios, such as application startups, system-calls,and many
+real-world applications. We therefore develop a newplatform for secure static
+binary instrumentation (PSI) that overcomes these drawbacks of DBI techniques,
+whileretaining the security, robustness and ease-of-use features.We illustrate
+the versatility of PSI by developing severalinstrumentation applications: basic
+block counting, shadowstack defense against control-flow hijack and
+return-orientedprogramming attacks, and system call and library policy
+en-forcement. While being competitive with the best DBI toolson CPU-intensive
+SPEC 2006 benchmark, PSI provides an order of magnitude reduction in overheads
+on a collection of real-world applications
+
+<h2>Status</h2>
+
+PSI is alpha software. It is provided only for the research and evaluation purpose.
+
+
+<h2><a name="download">Download</a></h2> 
+<p>
+Virtual Box VM shipped under GPL: <a href="psi-vbox-v1.0.tar.gz">psi-vbox-v1.0.tar.gz.</a>
+<p>
+This is the initial version. Updated version will be released later
+<!--The README.md file included in the distribution is also available <a href="README.md">here</a></br> -->
+                            
+<h2>Acknowledgments</h2>
+
+This work was supported in part by an NSF grant CNS-0831298, an AFOSR grant
+FA9550-09-1-0539, and an ONR grant N000140710928. 
+</div></td></tr></table>
+<div id="bottomstrip">
+
+<hr color="#960000" width=700 size="1" align="center">
+<table cellspacing=5 cellpadding=5>
+<tr >
+   <td>   <a href="index.html">Home  </a></td>
+   <td>   <a href="contact.html">Contact  </a></td>
+<!--
+   <td> <a href="http://www.sunysb.edu">Stony Brook University</a></td>
+   <td> <a href="http://www.cs.sunysb.edu">Computer Science </a></td>
+-->
+   <td>   <a href="http://www.cewit.org">CEWIT </a></td>
+   <td>   <a href="http://ccs.cs.sunysb.edu">Center for Cyber Security </a></td>
+</tr>
+</table>
+</div>
+
+<p>  </p>
+
+<div id="disclaimer">
+Copyright &copy; 1999-2015 Secure Systems Laboratory, Stony Brook University. All rights reserved.
+</div>
+
+</body>
+</html>
+

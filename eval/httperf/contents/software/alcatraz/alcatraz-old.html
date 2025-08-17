@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=windows-1252"
+ http-equiv="Content-Type">
+  <title>Alcatraz</title>
+  <meta content="Microsoft FrontPage 4.0" name="GENERATOR">
+  <meta content="FrontPage.Editor.Document" name="ProgId">
+<!--mstheme-->
+  <link href="css/secl1111.css" type="text/css" rel="stylesheet">
+  <meta content="seclab 1111, default" name="Microsoft Theme">
+</head>
+<body>
+<center>
+<table border="5" cellpadding="10">
+  <tbody>
+    <tr>
+      <td><font size="+3" color="#ff0000"> <b>Alcatraz: Isolated
+Program Execution<br>
+      </b></font></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>
+</p>
+
+<hr>
+<center>
+
+See our ACSAC 2003 <a href="http://www.acsac.org/2003/bestpaper.html" target=_top>"Outstanding Paper"</a> for an overview of this approach.
+
+</center>
+<hr>
+
+The goal of Alcatraz is to enable <em> safe execution of untrusted code.</em>
+Unlike sandboxing approches that restrict file access, Alcatraz allows
+untrusted code to access the entire file system. This factor
+enables most programs to run successfully under Alcatraz, as opposed
+to experiencing runtime aborts/exceptions due to security violations.
+
+<p> Alcatraz ensures system integrity by <em>isolating</em> changes made
+by untrusted process(es) so that they are invisible to other processes.
+This file-level isolation is achieved using <em>isolation contexts</em>,
+which can be thought of as a "private copy" of the entire file system. The
+untrusted process and all its children run within an isolation context, so
+that they all have a consistent view of the system. Isolation contexts are
+implemented using a copy-on-write technique, so that their storage
+requirements are proportional to the changes made within them, and not to
+the size of the entire file system. Performance overheads are modest for
+the application domain.
+
+<p>
+An important benefit of Alcatraz is that users don't have to specify what
+it means for untrusted software to operate correctly or securely. They
+simply run the code, and examine the results produced by the code. If the
+results are acceptable to them, they are committed to the file system.
+Otherwise, all changes made by untrusted code are discarded. This feature
+enables Alcatraz to be used beyond the domain of untrusted applications,
+e.g., to do a trial installation and testing of software. The test
+installation enables a user to assess whether the software solves
+the specific problem of interest to them, and address issues such as
+interactions with other software installated on the same machine. 
+
+<p>
+A beta version of Alcatraz will be available for download shortly. If you
+are interested in playing with an alpha version, please send mail to <a
+href=mailto:zliang@cs.sunysb.edu>zliang@cs.sunysb.edu</a>. Alcatraz
+operates purely at the user level, so you don't need root privileges to
+install or run the system.
+
+A local copy of the ACSAC 2003 can be obtained 
+<a href="/seclab/pubs/papers/acsac03.pdf">here.</a>
+
+<br> <br>
+<hr><font size="1"> </font> <div align="center"><font size="1"><img
+src="/seclab1/images/footer.jpg"></font></div> </body> </html>

@@ -1,0 +1,921 @@
+[lmbench3.0 results for Linux localhost.localdomain 5.14.0 #2 SMP Wed Apr 10 00:13:07 CDT 2024 x86_64 x86_64 x86_64 GNU/Linux]
+[LMBENCH_VER: ]
+[BENCHMARK_HARDWARE: NO]
+[BENCHMARK_OS: YES]
+[ALL: 512 1k 2k 4k 8k 16k 32k 64k 128k 256k 512k 1m 2m 4m 8m 16m 32m 64m 128m 256m 512m 1024m 2048m 4096m 8192m 16384m 32768m 65536m 131072m]
+[DISKS: ]
+[DISK_DESC: ]
+[ENOUGH: 5000]
+[FAST: ]
+[FASTMEM: NO]
+[FILE: /usr/tmp/XXX]
+[FSDIR: /usr/tmp]
+[HALF: 512 1k 2k 4k 8k 16k 32k 64k 128k 256k 512k 1m 2m 4m 8m 16m 32m 64m 128m 256m 512m 1024m 2048m 4096m 8192m 16384m 32768m 65536m]
+[INFO: INFO.localhost.localdomain]
+[LINE_SIZE: 64]
+[LOOP_O: 0.00000126]
+[MB: 211102]
+[MHZ: 3677 MHz, 0.2720 nanosec clock]
+[MOTHERBOARD: ]
+[NETWORKS: ]
+[PROCESSORS: 36]
+[REMOTE: ]
+[SLOWFS: NO]
+[OS: x86_64-linux-gnu]
+[SYNC_MAX: 0]
+[LMBENCH_SCHED: DEFAULT]
+[TIMING_O: 0]
+[LMBENCH VERSION: lmbench-3alpha4]
+[USER: root]
+[HOSTNAME: localhost.localdomain]
+[NODENAME: localhost.localdomain]
+[SYSNAME: Linux]
+[PROCESSOR: x86_64]
+[MACHINE: x86_64]
+[RELEASE: 5.14.0]
+[VERSION: #2 SMP Wed Apr 10 00:13:07 CDT 2024]
+[Thu Apr 11 01:37:33 PM CDT 2024]
+[ 13:37:33 up 47 min, 2 users, load average: 1.37, 0.77, 0.40]
+[net: Kernel Interface table]
+Kernel: error fetching interface information: Device not found
+[net: Iface             MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg]
+Iface: error fetching interface information: Device not found
+[net: enp1s0           1500    44583      0   1421 0         78206      0      0      0 BMRU]
+[if: enp1s0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500]
+[if: inet 192.168.122.74  netmask 255.255.255.0  broadcast 192.168.122.255]
+[if: inet6 fe80::5054:ff:fe1f:807d  prefixlen 64  scopeid 0x20<link>]
+[if: ether 52:54:00:1f:80:7d  txqueuelen 1000  (Ethernet)]
+[if: RX packets 44583  bytes 4194576 (4.0 MiB)]
+[if: RX errors 0  dropped 1421  overruns 0  frame 0]
+[if: TX packets 78206  bytes 12288002 (11.7 MiB)]
+[if: TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0]
+[if: ]
+[net: lo              65536     1972      0      0 0          1972      0      0      0 LRU]
+[if: lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536]
+[if: inet 127.0.0.1  netmask 255.0.0.0]
+[if: inet6 ::1  prefixlen 128  scopeid 0x10<host>]
+[if: loop  txqueuelen 1000  (Local Loopback)]
+[if: RX packets 1972  bytes 534432 (521.9 KiB)]
+[if: RX errors 0  dropped 0  overruns 0  frame 0]
+[if: TX packets 1972  bytes 534432 (521.9 KiB)]
+[if: TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0]
+[if: ]
+[mount: proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)]
+[mount: sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)]
+[mount: devtmpfs on /dev type devtmpfs (rw,nosuid,seclabel,size=154347612k,nr_inodes=38586903,mode=755,inode64)]
+[mount: securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)]
+[mount: tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,seclabel,inode64)]
+[mount: devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,seclabel,gid=5,mode=620,ptmxmode=000)]
+[mount: tmpfs on /run type tmpfs (rw,nosuid,nodev,seclabel,size=61762716k,nr_inodes=819200,mode=755,inode64)]
+[mount: cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,seclabel,nsdelegate,memory_recursiveprot)]
+[mount: pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime,seclabel)]
+[mount: none on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)]
+[mount: /dev/mapper/cs-root on / type xfs (rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota)]
+[mount: selinuxfs on /sys/fs/selinux type selinuxfs (rw,nosuid,noexec,relatime)]
+[mount: systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=29,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=31822)]
+[mount: debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime,seclabel)]
+[mount: tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime,seclabel)]
+[mount: mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime,seclabel)]
+[mount: hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,seclabel,pagesize=2M)]
+[mount: fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)]
+[mount: configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)]
+[mount: none on /run/credentials/systemd-sysctl.service type ramfs (ro,nosuid,nodev,noexec,relatime,seclabel,mode=700)]
+[mount: none on /run/credentials/systemd-tmpfiles-setup-dev.service type ramfs (ro,nosuid,nodev,noexec,relatime,seclabel,mode=700)]
+[mount: /dev/mapper/cs-home on /home type xfs (rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota)]
+[mount: /dev/vda1 on /boot type xfs (rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota)]
+[mount: none on /run/credentials/systemd-tmpfiles-setup.service type ramfs (ro,nosuid,nodev,noexec,relatime,seclabel,mode=700)]
+[mount: tmpfs on /run/user/42 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=30881356k,nr_inodes=7720339,mode=700,uid=42,gid=42,inode64)]
+[mount: tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=30881356k,nr_inodes=7720339,mode=700,inode64)]
+Usage: lat_syscall [-P <parallelism>] [-W <warmup>] [-N <repetitions>] null|read|write|stat|fstat|open [file]
+Usage: lat_syscall [-P <parallelism>] [-W <warmup>] [-N <repetitions>] null|read|write|stat|fstat|open [file]
+Usage: lat_syscall [-P <parallelism>] [-W <warmup>] [-N <repetitions>] null|read|write|stat|fstat|open [file]
+Usage: lat_syscall [-P <parallelism>] [-W <warmup>] [-N <repetitions>] null|read|write|stat|fstat|open [file]
+Usage: lat_syscall [-P <parallelism>] [-W <warmup>] [-N <repetitions>] null|read|write|stat|fstat|open [file]
+Usage: lat_syscall [-P <parallelism>] [-W <warmup>] [-N <repetitions>] null|read|write|stat|fstat|open [file]
+Usage: lat_select [-n <#descriptors>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] file|tcp
+Usage: lat_select [-n <#descriptors>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] file|tcp
+Usage: lat_select [-n <#descriptors>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] file|tcp
+Usage: lat_select [-n <#descriptors>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] file|tcp
+Usage: lat_select [-n <#descriptors>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] file|tcp
+Usage: lat_select [-n <#descriptors>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] file|tcp
+Usage: lat_select [-n <#descriptors>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] file|tcp
+Usage: lat_select [-n <#descriptors>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] file|tcp
+Usage: lat_sig [-P <parallelism>] [-W <warmup>] [-N <repetitions>] install|catch|prot [file]
+Usage: lat_sig [-P <parallelism>] [-W <warmup>] [-N <repetitions>] install|catch|prot [file]
+Usage: lat_sig [-P <parallelism>] [-W <warmup>] [-N <repetitions>] install|catch|prot [file]
+Usage: lat_pipe [-P <parallelism>] [-W <warmup>] [-N <repetitions>]
+Usage: lat_unix [-m <message size>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>]
+Usage: lat_proc [-P <parallelism>] [-W <warmup>] [-N <repetitions>] procedure|fork|exec|shell
+Usage: lat_proc [-P <parallelism>] [-W <warmup>] [-N <repetitions>] procedure|fork|exec|shell
+Usage: lat_proc [-P <parallelism>] [-W <warmup>] [-N <repetitions>] procedure|fork|exec|shell
+Usage: lat_pagefault [-C] [-P <parallel>] [-W <warmup>] [-N <repetitions>] file
+
+"mappings
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+Usage: lat_mmap [-r] [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] size file
+
+"File system latency
+0k	349	61003	68541
+1k	239	42219	64586
+4k	233	43052	61210
+10k	113	22227	62197
+
+unable to register (XACT_PROG, XACT_VERS, udp).
+Usage: lat_udp -s
+ OR [-S] [-m <message size>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] server
+ NOTE: message size must be >= 4
+Usage: lat_tcp -s
+ OR [-m <message size>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] server
+ OR -S server
+Usage: lat_rpc -s
+ OR [-p <tcp|udp>] [-P parallel] [-W <warmup>] [-N <repetitions>] serverhost
+ OR -S serverhost
+Usage: lat_rpc -s
+ OR [-p <tcp|udp>] [-P parallel] [-W <warmup>] [-N <repetitions>] serverhost
+ OR -S serverhost
+
+Socket bandwidth using localhost
+Usage: bw_tcp -s
+ OR [-m <message size>] [-M <bytes to move>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] server
+ OR -S serverhost
+Usage: bw_tcp -s
+ OR [-m <message size>] [-M <bytes to move>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] server
+ OR -S serverhost
+Usage: bw_tcp -s
+ OR [-m <message size>] [-M <bytes to move>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] server
+ OR -S serverhost
+Usage: bw_tcp -s
+ OR [-m <message size>] [-M <bytes to move>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] server
+ OR -S serverhost
+Usage: bw_tcp -s
+ OR [-m <message size>] [-M <bytes to move>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] server
+ OR -S serverhost
+Usage: bw_tcp -s
+ OR [-m <message size>] [-M <bytes to move>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] server
+ OR -S serverhost
+Usage: bw_tcp -s
+ OR [-m <message size>] [-M <bytes to move>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] server
+ OR -S serverhost
+Usage: bw_tcp -s
+ OR [-m <message size>] [-M <bytes to move>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] server
+ OR -S serverhost
+
+Avg xfer: 3.2KB, 41.8KB in 3.3740 millisecs, 12.38 MB/sec
+Usage: bw_unix [-m <message size>] [-M <total bytes>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>]
+Usage: bw_pipe [-m <message size>] [-M <total bytes>] [-P <parallelism>] [-W <warmup>] [-N <repetitions>]
+
+"read bandwidth
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+
+"read open2close bandwidth
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+Usage: bw_file_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|io_only <filename>
+min size=64
+
+
+"Mmap read bandwidth
+Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>
+"Mmap read open2close bandwidth
+Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>Usage: bw_mmap_rd [-C] [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> open2close|mmap_only <filename>
+
+"libc bcopy unaligned
+Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512
+"libc bcopy aligned
+Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512
+Memory bzero bandwidth
+Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512
+"unrolled bcopy unaligned
+Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512
+"unrolled partial bcopy unaligned
+Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512
+Memory read bandwidth
+Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512
+Memory partial read bandwidth
+Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512
+Memory write bandwidth
+Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512
+Memory partial write bandwidth
+Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512
+Memory partial read/write bandwidth
+Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512Usage: bw_mem [-P <parallelism>] [-W <warmup>] [-N <repetitions>] <size> what [conflict]
+what: rd wr rdwr cp fwr frd fcp bzero bcopy
+<size> must be larger than 512
+
+Usage: lat_ctx [-P <parallelism>] [-W <warmup>] [-N <repetitions>] [-s kbytes] processes [processes ...]
+Usage: lat_ctx [-P <parallelism>] [-W <warmup>] [-N <repetitions>] [-s kbytes] processes [processes ...]
+Usage: lat_ctx [-P <parallelism>] [-W <warmup>] [-N <repetitions>] [-s kbytes] processes [processes ...]
+Usage: lat_ctx [-P <parallelism>] [-W <warmup>] [-N <repetitions>] [-s kbytes] processes [processes ...]
+Usage: lat_ctx [-P <parallelism>] [-W <warmup>] [-N <repetitions>] [-s kbytes] processes [processes ...]
+Usage: lat_ctx [-P <parallelism>] [-W <warmup>] [-N <repetitions>] [-s kbytes] processes [processes ...]
+
+
+[Thu Apr 11 01:38:38 PM CDT 2024]

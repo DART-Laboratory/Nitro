@@ -1,0 +1,5 @@
+This directory includes the postmark benchmark adopted from the Eaudit suite, as well as a modified version that introduces delays for specialized testing. The primary script, `runpm`, allows for the parallel execution of multiple postmark instances. Each instance operates in its own subdirectory to enhance parallelism. Workload sizes and additional parameters can be configured in the `pm-config.{nano,micro,sm,reg}` files, with the suffix denoting the benchmark's approximate runtime.
+
+Please note that the tailored postmark with deliberate delays is tailored for serial execution and is not compatible with `runpm`. This modification addresses the evaluation of audit collection systems that may struggle with even a single standard postmark instance.
+
+Compilation is required using the makefile before executing the scripts. As postmark is coded in an antiquated C dialect, be prepared for numerous compiler warning messages.

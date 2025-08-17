@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if (( $# < 1 || $# > 4 )); then
+    echo "Usage: $0 <datafilename>" && exit 1
+fi
+
+outfile="$1"
+
+if [[ "${outfile##*.}" != "csv" ]]; then
+    echo "data file name should have a csv suffix" && exit 1
+fi
+
+if [[ -f $outfile ]]; then
+    echo "refusing to overwrite an existing data file" && exit 1
+fi
+
+
+./bmrun $outfile run_shbm 200000
+./bmrun $outfile run_tar 144
+./bmrun $outfile run_find 288
+./bmrun $outfile "run_pm pm-config.sm" 24
+./bmrun $outfile run_rdwr 1000000
+./bmrun $outfile run_kernbuild 1
+./bmrun $outfile run_httperf 150

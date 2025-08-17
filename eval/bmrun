@@ -1,0 +1,125 @@
+#!/bin/bash
+
+core_ct=$(nproc)
+iterations=1
+bmark_cmd="run_pm pm-config.sm"
+bmark_loops=$core_ct
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: $0 outfile [benchmark_cmd [benchmark_loops [iterations]]]"
+  exit 1
+fi
+
+outfile="$1"
+bmark_cmd=${2:-$bmark_cmd}
+bmark_loops=${3:-$bmark_loops}
+iterations=${4:-$iterations}
+bmark_nm=$(echo "$bmark_cmd" | awk '{print $1}')
+bmoutfile="/tmp/$outfile.bm"
+
+NITRO_BIN="python3 Nitro.py"
+LOSS_CSV="$(readlink -f ./data_loss.csv)"
+NITRO_ARGS=(-f 3000 -x 8000 -z 32 -t 100 -c 64 -g 1000000000 -s 200000000 -r 64 -o ./log.txt)
+NITRO_ARGS_DLOSS=(--record-loss --loss-csv "$LOSS_CSV" --benchmark "$bmark_nm")
+
+if [[ "${outfile##*.}" != "csv" ]]; then
+  echo "outfile should have a csv suffix" && exit 1
+fi
+
+nitro_pid=""
+
+start_nitro() {
+  pkill -f "python3 Nitro.py" 2>/dev/null || true
+  sleep 5
+  echo "[Nitro] start: $NITRO_BIN ${NITRO_ARGS[*]}"
+  ( cd .. && exec $NITRO_BIN "${NITRO_ARGS[@]}" ) &
+  nitro_pid=$!
+  sleep 5
+}
+
+start_nitro_dl() {
+  pkill -f "python3 Nitro.py" 2>/dev/null || true
+  sleep 15
+  echo "[Nitro] start(dloss): $NITRO_BIN ${NITRO_ARGS[*]} ${NITRO_ARGS_DLOSS[*]}"
+  ( cd .. && exec $NITRO_BIN "${NITRO_ARGS[@]}" "${NITRO_ARGS_DLOSS[@]}" ) &
+  nitro_pid=$!
+}
+
+stop_nitro() {
+  if [[ -n "$nitro_pid" ]] && kill -0 "$nitro_pid" 2>/dev/null; then
+    echo "[Nitro] stop (SIGINT)"
+    kill -INT "$nitro_pid" 2>/dev/null || true
+    for _ in {1..50}; do
+      sleep 0.1
+      kill -0 "$nitro_pid" 2>/dev/null || { nitro_pid=""; break; }
+    done
+  else
+    pkill -INT -f "python3 Nitro.py" 2>/dev/null || true
+    sleep 0.5
+  fi
+  sleep 15
+  pkill -f "python3 Nitro.py" 2>/dev/null || true
+  sleep 15
+}
+trap stop_nitro EXIT INT TERM
+
+bmark_stats() {
+  elapsedt=$(egrep -a ^real "$bmoutfile" | awk 'NR==1{print $2}' | awk -Fm '{print ($1*60)+$2}')
+  usert=$(grep  -a ^user "$bmoutfile" | awk 'NR==1{print $2}' | awk -Fm '{print ($1*60)+$2}')
+  syst=$(grep  -a ^sys  "$bmoutfile" | awk 'NR==1{print $2}' | awk -Fm '{print ($1*60)+$2}')
+  echo -n "$elapsedt,$usert,$syst," >> "$outf"
+}
+
+bmark() {
+  echo "[RUN] $bmark_cmd threads=$1 loops=$2"
+  ./$bmark_cmd "$1" "$2" >& "$bmoutfile"
+  bmark_stats
+}
+
+ensure_header() { [[ -f "$outfile" ]] || echo "bmark,mode,trial,threads,bm_wall,bm_usr,bm_sys," > "$outfile"; }
+
+run_one() {
+  echo -n "$bmark_nm,$1,$i,$n," >> "$outf"
+  bmark "$n" $(( (bmark_loops + n/2)/n ))
+  echo "" >> "$outf"
+}
+
+phase_no() {
+  ensure_header; outf="$outfile"
+  echo "[Phase] no system"
+  for (( i=0; i<iterations; i++ )); do
+    for (( n=1; n<=16; n*=2 )); do
+      echo "[Trial] i=$i n=$n"
+      run_one no
+      sleep 15
+    done
+  done
+}
+
+phase_with() {
+  ensure_header; outf="$outfile"
+  echo "[Phase] with system"
+  start_nitro
+  for (( i=0; i<iterations; i++ )); do
+    for (( n=1; n<=16; n*=2 )); do
+      echo "[Trial] i=$i n=$n"
+      run_one with
+      sleep 15
+    done
+  done
+  stop_nitro
+}
+
+phase_dloss() {
+  ensure_header; outf="$outfile"
+  echo "[Phase] data loss @ n=16"
+  start_nitro_dl
+  i=0; n=16
+  run_one with
+  sleep 15
+  stop_nitro
+}
+
+phase_no
+phase_with
+phase_dloss

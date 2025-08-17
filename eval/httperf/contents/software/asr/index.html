@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Etrace</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<!--mstheme--><link rel="stylesheet" type="text/css" href="css/secl1111.css"><meta name="Microsoft Theme" content="seclab 1111, default">
+<meta name="Microsoft Border" content="none, default">
+</head>
+
+<body>
+
+<center><table cellpadding = "10" border="5"> <tr><td><font color = "ff0000" size = "+3"> <b>Etrace</b></font></td></tr></table></center>
+
+<hr>
+<center>
+Here is a <a href="tracer.pdf">technical report</a> that describes the
+      architecture and implementation of the Etrace. A <a
+	href="../../pubs/ndss00.pdf">paper</a> 
+      that describes an earlier version of the etrace is also available. 
+</center>
+<hr>
+
+<h2><a>Introduction</a></h2> 
+<p>
+Etrace is an extensible system call interposition framework. It intercepts
+system calls made by the monitored process and all its children. For each
+system call, etrace stops the calling process at the entry and exit of the
+system call. Then extensions are called. Extensions are hand-written or
+generated from a policy specification language, BMSL. Sample extensions
+include sandboxing policies and <a href="../alcatraz">Alcatraz</a>. 
+In order to facilitate the access of system call information, etrace
+provides a simple interface that hides low-level details. 
+</p>
+
+<p>
+Etrace is designed to be portable across platforms. It uses a C++ classes to
+encapsulate all architecture-dependent details. Porting etrace to another
+platform only involves rewriting the class using mechanisms provided by the
+new platform. In the current implementation, Linux on IA-32 architecture is
+supported via the ptrace interface of Linux.   
+</p>
+
+<!-- <h2><a>Features</a></h2> --!>
+
+<!-- <h2><a>Change Log</a></h2> -->
+<!-- <p> 05/23/2005: Initial release. Version 0.8.0. </p>  -->
+<hr>
+
+<h2><a name="download">Download</a></h2> 
+<p>
+Shipped under GPL. Current version: 0.8.2. Click 
+<a href="etrace-0.8.2.tar.gz">here</a> to download. 
+</p>
+						    
+<p>Compatible OS: RedHat Linux 7.3, 8.0, Fedora Core 2, and RHEL
+4/CentOS 4. </p>
+
+<hr>
+
+<font size="1">
+
+<div align="center"><img src="../seclab1/images/footer.jpg"></div>
+
+</body>
+
+</html>

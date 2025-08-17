@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<title>Policy</title>
+</head>
+
+<body>
+<center><h2> Features of RPMShield</h2></center>
+
+<H4> Policy-based control of package installation actions </H4>
+While existing package managers such as RPM allow a system administrator<br>
+to examine package contents and installation scripts in detail, this is a<br>
+ cumbersome process and hence seldom undertaken. In contrast, our<br>
+approach presents a convenient interface through which a system<br>
+administrator can exert control over installation actions that impact<br>
+system security or the operation of existing applications.<br>
+<br>
+<H4>Notification of security relevant behavior of packages</H4>
+Our tool conveniently notifies the user of any actions of the package manager<br>
+that may affect system security and operability.<br>
+<br>
+<H4>Operability with changes made outside of package managers</H4><br>
+Our approach provides a convenient mechanism to control updates to<br>
+manually edited files, files shared among multiple packages, or<br>
+more generally, files installed outside the scope of the package manager.<br>
+<br>
+<H4> Normal-user installation of packages</H4> Individual users often want to install packages that are of interest to themselves. Since all RPM<br>
+installation actions require super-user privilege, normal users are unable<br>
+to install such packages for themselves. Our approach can support this<br>
+capability through the use of security policies that limit installation<br>
+actions so that the changes are restricted to a specific user directory.<br>
+(still under testing, not shipped with current release 1.0).
+<H4>Tolerance to failures</H4> Existing package managers offer poor support<br>
+to revert  to original system configuration when an installation<br>
+upgrade/process fails. Our automatic recovery mechanism<br>
+reverts the system  to its original (consistent) state.
+
+</body>
+
+</html>

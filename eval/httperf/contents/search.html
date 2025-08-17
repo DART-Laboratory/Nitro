@@ -1,0 +1,48 @@
+
+<h3>Local Search</h3>
+
+<script type="text/javascript">
+<!--
+function slssub() {
+   if (document.sls.domnm.selectedIndex == 3) {
+      document.slsnn.p.value = document.sls.q.value;
+      document.slsnn.csz.value = "Stony Brook, NY";
+      document.slsnn.submit();
+   }
+   else { 
+     var x="";
+     if (document.sls.domnm.selectedIndex == 0)
+        x = "+site:seclab.cs.sunysb.edu";
+     else if (document.sls.domnm.selectedIndex == 1)
+        x = "+site:cs.sunysb.edu";
+     else if (document.sls.domnm.selectedIndex == 2)
+        x = "+site:sunysb.edu";
+     document.slsn.q.value = document.sls.q.value + x; 
+     document.slsn.submit();
+  }
+  return false;
+}
+-->
+</script>
+
+<form name="slsn" action="http://www.google.com/search" method="get" target="_blank">
+<input type="hidden" name="q">
+</form>
+
+<form name="slsnn" action="http://local.yahoo.com/results" method="get" target="_blank">
+<input type="hidden" name="p">
+<input type="hidden" name="csz">
+</form>
+
+<form name="sls" action="http://www.google.com/" method="get" OnSubmit="return slssub()">
+<input type="textarea" name="q"><br>
+<input value="Search" name="r" type="submit">
+<select name="domnm">
+  <option>@seclab</option>
+  <option>@cs.sunysb.edu</option>
+  <option>@sunysb.edu</option>
+  <option>Around SBU</option>
+</select>
+</form>
+
+
