@@ -3,51 +3,19 @@
 **Nitro** is a high-performance, tamper-evident logging system built entirely on Linux eBPF. It ensures forward security (FA) and offers provable security guarantees through the XLog secure logging protocol proposed in our paper.
 
 ---
-> **This system is based on our paper published at ACM CCS 2025:**  
-> *Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System*  
-> Rui Zhao, Muhammad Shoaib, Viet Tung Hoang, and Wajih Ul Hassan  
-> In ACM Conference on Computer and Communications Security (CCS), 2025  
->
-> ```bibtex
-> @inproceedings{nitro,
->   title = {Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System},
->   author = {Zhao, Rui and Shoaib, Muhammad and Hoang, Viet Tung and Hassan, Wajih Ul},
->   booktitle = {ACM Conference on Computer and Communications Security (CCS)},
->   year = {2025},
-> }
-> `
+This system is based on our paper published at **ACM CCS 2025**:  
+*Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System*  
+Rui Zhao, Muhammad Shoaib, Viet Tung Hoang, and Wajih Ul Hassan  
+
+```bibtex
+@inproceedings{nitro,
+  title = {Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System},
+  author = {Zhao, Rui and Shoaib, Muhammad and Hoang, Viet Tung and Hassan, Wajih Ul},
+  booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+  year = {2025},
+}
+```
 ---
-
-## 📜 Script Overview
-
-This repository contains the following key scripts and sources:
-
-- **`Nitro.py`**  
-  Loader/runner for the C-side programs **Nitro** and **Nitro-R**. 
-
-  It compiles/loads the eBPF program, opens the ring buffer, captures logs streamed from kernel space, and writes them to disk. It also exposes command-line options for runtime configuration.
-
-- **`Nitro.c`** & **`Nitro.h`**  
-  Core eBPF logic of **Nitro** and its header definitions. 
-
-  Including MAC processing (XLog), log capture, two-level buffers (Per-CPU Array/ring buffer), and two-level time controllers (SGAP/GAP).
-
-- **`Nitro-R.c`** & **`Nitro-R.h`**  
-  Variant of the core logic (**Nitro-R**) and its headers. 
-
-  Including all Nitro features plus kernel-side log reduction.
-
-- **`Decoder.py`**  
-  Userspace decoder for kernel-encoded records. It can be invoked **at runtime** (decode on the fly) or **post-hoc** (decode after capture).  
-
-  Post-hoc decoding provides better runtime performance. For easier auditing and inspection, runtime decoding is **enabled by default**.
-
-- **`bcc_install.sh`**  
-  One-step script to install eBPF/BCC dependencies (primarily for Ubuntu).
-
-See [Evaluation Readme](./eval/README.md) for more Details.
-
-
 ## 📦 Installation
 
 ### 1) Native install (by OS)
@@ -76,22 +44,7 @@ Follow the official BCC installation instructions from the repository you just c
 📌 Tip: You can also refer to bcc_install.sh in this repo for version-specific dependencies and setup guidance.
 
 
-### 2) Recommended: run in a VM
-
-For reproducibility and isolation, we recommend running Nitro inside a virtual machine.
-
-- **Paper-scale configuration (for reproducing our experiments)**  
-  Use **Ubuntu 22.04** with **Linux kernel 6.5.0** (or later).  
-  Example profile: **36 vCPUs**, **300 GB RAM**, **≥ 200 GB disk**, virtio disk/NIC, and virtio-rng.
-- Run ./bcc_install.sh to complete the setup.
-
-> Tips  
-> • Disable unnecessary background services in the guest to reduce noise during benchmarking.  
-> • If you need stable timings, pin vCPUs and consider using hugepages on the host.
-
----
-
-### 3) Easiest: use our prebuilt VM image (`Nitro.qcow2`)
+### 2) Easiest: use our prebuilt VM image (`Nitro.qcow2`)
 
 We provide a prebuilt image aligned with the paper’s environment: **Ubuntu 22.04, kernel 6.5.0**, with Nitro and dependencies preinstalled.
 
@@ -132,6 +85,40 @@ You can download the VM [here](https://myuva-my.sharepoint.com/:f:/g/personal/dk
 1. Open **virt-manager** → “Import existing disk image”.
 2. Select `Nitro.qcow2`, set OS type to Ubuntu 22.04, and choose virtio for disk/NIC.
 3. Assign vCPUs/RAM (use paper or dev profile), finish, boot, and log in as `nitro`.
+
+> Tips  
+> • Disable unnecessary background services in the guest to reduce noise during benchmarking.  
+> • If you need stable timings, pin vCPUs and consider using hugepages on the host.
+
+## 📜 Script Overview
+
+This repository contains the following key scripts and sources:
+
+- **`Nitro.py`**  
+  Loader/runner for the C-side programs **Nitro** and **Nitro-R**. 
+
+  It compiles/loads the eBPF program, opens the ring buffer, captures logs streamed from kernel space, and writes them to disk. It also exposes command-line options for runtime configuration.
+
+- **`Nitro.c`** & **`Nitro.h`**  
+  Core eBPF logic of **Nitro** and its header definitions. 
+
+  Including MAC processing (XLog), log capture, two-level buffers (Per-CPU Array/ring buffer), and two-level time controllers (SGAP/GAP).
+
+- **`Nitro-R.c`** & **`Nitro-R.h`**  
+  Variant of the core logic (**Nitro-R**) and its headers. 
+
+  Including all Nitro features plus kernel-side log reduction.
+
+- **`Decoder.py`**  
+  Userspace decoder for kernel-encoded records. It can be invoked **at runtime** (decode on the fly) or **post-hoc** (decode after capture).  
+
+  Post-hoc decoding provides better runtime performance. For easier auditing and inspection, runtime decoding is **enabled by default**.
+
+- **`bcc_install.sh`**  
+  One-step script to install eBPF/BCC dependencies (primarily for Ubuntu).
+
+See [Evaluation Readme](./eval/README.md) for more Details.
+
 
 ## 🧪 Usage
 
