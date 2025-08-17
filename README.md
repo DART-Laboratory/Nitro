@@ -1,4 +1,6 @@
-# Nitro
+<p align="center">
+  <img src="./logo.png" alt="Nitro Logo" width="300"/>
+</p>
 
 **Nitro** is a high-performance, tamper-evident logging system built entirely on Linux eBPF. It ensures forward security (FA) and offers provable security guarantees through the XLog secure logging protocol proposed in our paper.
 
