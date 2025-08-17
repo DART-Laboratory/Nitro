@@ -3,6 +3,20 @@
 **Nitro** is a high-performance, tamper-evident logging system built entirely on Linux eBPF. It ensures forward security (FA) and offers provable security guarantees through the XLog secure logging protocol proposed in our paper.
 
 ---
+> **This system is based on our paper published at ACM CCS 2025:**  
+> *Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System*  
+> Rui Zhao, Muhammad Shoaib, Viet Tung Hoang, and Wajih Ul Hassan  
+> In ACM Conference on Computer and Communications Security (CCS), 2025  
+>
+> ```bibtex
+> @inproceedings{nitro,
+>   title = {Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System},
+>   author = {Zhao, Rui and Shoaib, Muhammad and Hoang, Viet Tung and Hassan, Wajih Ul},
+>   booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+>   year = {2025},
+> }
+> `
+---
 
 ## 📜 Script Overview
 
