@@ -50,7 +50,7 @@ Follow the official BCC installation instructions from the repository you just c
 
 We provide a prebuilt image aligned with the paper’s environment: **Ubuntu 22.04, kernel 6.5.0**, with Nitro and dependencies preinstalled.
 
-You can download the VM [here](https://myuva-my.sharepoint.com/:f:/g/personal/dkw7xn_virginia_edu/EiFmv8E8mcJCnS4HWC1bVOcBbAs_m7ctdOjo06OeoY58gA?e=NnOaou).
+You can download the VM [here](https://myuva-my.sharepoint.com/:f:/g/personal/hur7wv_virginia_edu/EpDI8d9GXfFPvDDTi6XJagUBBOV-CFgGK5REW-dnUMplzQ?e=Xg15gS).
 
 - **Default credentials**  
   `username: nitro`  
