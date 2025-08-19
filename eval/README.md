@@ -1,5 +1,8 @@
 # Evaluation Benchmarks README
 
+### Please install **Nitro** using the [guidelines here](https://github.com/DART-Laboratory/Nitro/blob/main/README.md) before running the benchmarks below.
+
+
 This directory contains all the benchmarks utilized in our research paper, providing a comprehensive suite for performance evaluation. Below you will find a detailed description of each benchmark included in this suite.
 
 ## Install
