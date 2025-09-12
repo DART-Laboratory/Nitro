@@ -78,7 +78,7 @@ Follow the official BCC installation instructions from the repository you just c
 
 ### 2) Easiest: use our prebuilt VM image (`Nitro.qcow2`)
 
-We provide a prebuilt image aligned with the paper’s environment: **Ubuntu 22.04, kernel 6.5.0**, with Nitro and dependencies preinstalled.
+We provide a prebuilt Ubuntu 22.04 image with kernel 6.8.0, including Nitro and all dependencies preinstalled.
 
 You can download the VM [here](https://myuva-my.sharepoint.com/:f:/g/personal/hur7wv_virginia_edu/EpDI8d9GXfFPvDDTi6XJagUBBOV-CFgGK5REW-dnUMplzQ?e=Xg15gS).
 
