@@ -4,6 +4,27 @@
 
 **Nitro** is a high-performance, tamper-evident logging system built entirely on Linux eBPF. It ensures forward security (FA) and offers provable security guarantees through the XLog secure logging protocol proposed in our paper.
 
+Nitro is based on our paper published at **ACM Conference on Computer and Communications Security (CCS) 2025**:  
+*Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System*  
+Rui Zhao, Muhammad Shoaib, Viet Tung Hoang, and Wajih Ul Hassan  
+**🏅 Distinguished Paper Award**
+
+```bibtex
+@inproceedings{nitro,
+  title = {Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System},
+  author = {Zhao, Rui and Shoaib, Muhammad and Hoang, Viet Tung and Hassan, Wajih Ul},
+  booktitle = {ACM Conference on Computer and Communications Security (CCS)},
+  year = {2025},
+}
+```
+
+## Why Nitro?
+Security teams rely on logs to reconstruct attacks — but traditional loggers are too slow, lose data, or require expensive hardware. Nitro brings together **cryptography, operating systems, and modern kernel technology** to deliver logs that are:  
+
+- **Tamper-evident** (attackers cannot silently alter history)  
+- **Fast and scalable** (handles enterprise-level workloads)  
+- **Practical to deploy** (no kernel patches, works with standard Linux)  
+
 ---
 
 ## Key Features
@@ -25,29 +46,7 @@
 
 ---
 
-## Why Nitro?
 
-Security teams rely on logs to reconstruct attacks — but traditional loggers are too slow, lose data, or require expensive hardware. Nitro brings together **cryptography, operating systems, and modern kernel technology** to deliver logs that are:  
-
-- **Tamper-evident** (attackers cannot silently alter history)  
-- **Fast and scalable** (handles enterprise-level workloads)  
-- **Practical to deploy** (no kernel patches, works with standard Linux)  
-
-
----
-This system is based on our paper published at **ACM CCS 2025**:  
-*Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System*  
-Rui Zhao, Muhammad Shoaib, Viet Tung Hoang, and Wajih Ul Hassan  
-
-```bibtex
-@inproceedings{nitro,
-  title = {Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System},
-  author = {Zhao, Rui and Shoaib, Muhammad and Hoang, Viet Tung and Hassan, Wajih Ul},
-  booktitle = {ACM Conference on Computer and Communications Security (CCS)},
-  year = {2025},
-}
-```
----
 ## 📦 Installation
 
 ### 1) Native install (by OS)
