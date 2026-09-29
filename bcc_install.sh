@@ -1,3 +1,8 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# From eAudit (https://github.com/seclab-stonybrook/eaudit), (c) the eAudit
+# authors, licensed under GPL-3.0-or-later (see LICENSES/GPL-3.0-or-later.txt).
+# Not covered by Nitro's MIT license.
+
 fatal() {
   echo "BCC installation failed at the following step: $1"
   exit 1

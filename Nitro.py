@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2025 Rui Zhao and Wajih Ul Hassan
 from bcc import BPF
 import sys, os, argparse, time, multiprocessing, csv, signal
 from Decoder import *

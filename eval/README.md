@@ -31,7 +31,7 @@ After these steps, your environment will be ready for running the benchmarks and
 2. `bmrunall`: Master script to run all benchmarks collectively.
 3. `run_find`: Script to execute the `find` benchmark.
 4. `run_httperf`: Script to perform the `httperf` benchmark.
-5. `run_kernelbuild`: Script to carry out the kernel compilation benchmark.
+5. `run_kernbuild`: Script to carry out the kernel compilation benchmark.
 6. `run_pm`: Script for running the PostMark benchmark.
 7. `run_rdwr`: Script to execute the `rdwr` benchmark.
 8. `run_shbm`: Script to run the `shbm` benchmark.
@@ -41,7 +41,7 @@ After these steps, your environment will be ready for running the benchmarks and
 #### Important Notes
 
 - Ensure that the directories `./postmark`, `./rdwr`, `./httperf`, and the scripts `run_pm`, `bmrun`, and `bmrunall` are all contained within the same directory.
-- Our stress-test benchmarks, with the exception of lmbench, originate from eaudit. The eaudit repository can be accessed at: [eaudit GitHub repository](https://github.com/seclab-stonybrook/eaudit).
+- Our stress-test benchmarks, with the exception of lmbench, originate from eaudit. The eaudit repository can be accessed at: [eaudit GitHub repository](https://github.com/seclab-stonybrook/eaudit). The httperf web content comes from the Stony Brook Secure Systems Lab website. These third-party files keep their original licenses; see [THIRD_PARTY.md](./THIRD_PARTY.md).
 
 ### Real-world Benchmarks
 

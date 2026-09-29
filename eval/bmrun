@@ -1,5 +1,27 @@
 #!/bin/bash
 
+#******************************************************************************
+#  Copyright 2022-23 Hanke Kimm and R. Sekar, Stony Brook University
+#******************************************************************************
+# This file is part of eAudit.
+#
+# eAudit is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later
+# version.
+#
+# eAudit is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+# A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# eAudit. If not, see <https://www.gnu.org/licenses/>.
+#****************************************************************************
+#
+# Modified by the Nitro authors in 2025 to benchmark Nitro/Nitro-R (with and
+# without logging enabled). This file remains under GPL-3.0-or-later; see
+# ../LICENSES/GPL-3.0-or-later.txt and THIRD_PARTY.md.
+
 core_ct=$(nproc)
 iterations=1
 bmark_cmd="run_pm pm-config.sm"

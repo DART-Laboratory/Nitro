@@ -1,4 +1,8 @@
 #!/bin/bash
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Adapted from eAudit's eval/bmrunall (https://github.com/seclab-stonybrook/eaudit),
+# (c) the eAudit authors. Modified by the Nitro authors in 2025 to run the
+# Nitro/Nitro-R benchmarks. See THIRD_PARTY.md.
 
 if (( $# < 1 || $# > 4 )); then
     echo "Usage: $0 <datafilename>" && exit 1

@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: GPL-2.0-only OR MIT
+// Copyright (c) 2025 Rui Zhao and Wajih Ul Hassan
+
 #define FIXED_SHRINK FULL_FIXED_LEN - 128
 #define FLEX_SHRINK FULL_FLEX - 256
 #define CPU_Array_Size (FULL_FIXED_LEN * 8 + FULL_FLEX)

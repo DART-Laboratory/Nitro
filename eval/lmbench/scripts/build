@@ -248,6 +248,8 @@ rm -f ${BASE}$$ ${BASE}$$.o ${BASE}$$.c
 
 if [ ! -d ${BINDIR} ]; then mkdir -p ${BINDIR}; fi
 
+# Modified by the Nitro authors in 2025: link against libtirpc (Sun RPC was
+# removed from glibc). Not part of upstream intel/lmbench 701c6c3.
 LDLIBS="${LDLIBS} -ltirpc"
 CFLAGS="${CFLAGS} -I/usr/include/tirpc"
 

@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2025 Rui Zhao and Wajih Ul Hassan
+
 sys_map = {0: 'execve', 1: 'open', 2: 'openat', 3: 'creat', 4: 'truncate', 5: 'ftruncate', 6: 'dup', 7: 'dup2',
            8: 'dup3', 9: 'fcntl', 10: 'pipe', 11: 'socketpair', 12: 'pipe2', 13: 'socket', 14: 'accept',
            15: 'accept4', 16: 'connect', 17: 'getpeername', 18: 'read', 19: 'readv', 20: 'recvmsg', 21: 'recvmmsg',

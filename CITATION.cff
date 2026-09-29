@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use Nitro, please cite our CCS 2025 paper."
+title: "Nitro: High-Performance Tamper-Evident Logging with eBPF"
+abstract: "Nitro is a high-performance, tamper-evident logging system built entirely on Linux eBPF. It ensures forward security and offers provable security guarantees through the XLog secure logging protocol."
+type: software
+license: MIT
+repository-code: "https://github.com/DART-Laboratory/Nitro"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.16891211"
+    description: "Zenodo concept DOI (all versions)"
+authors:
+  - family-names: Zhao
+    given-names: Rui
+    affiliation: University of Virginia
+    orcid: "https://orcid.org/0009-0004-7898-6831"
+  - family-names: Shoaib
+    given-names: Muhammad
+    affiliation: University of Virginia
+    orcid: "https://orcid.org/0009-0008-2009-9542"
+  - family-names: Hoang
+    given-names: Viet Tung
+    affiliation: Florida State University
+    orcid: "https://orcid.org/0000-0003-3092-6405"
+  - family-names: Hassan
+    given-names: Wajih Ul
+    affiliation: University of Virginia
+    orcid: "https://orcid.org/0000-0002-5676-6027"
+preferred-citation:
+  type: conference-paper
+  title: "Rethinking Tamper-Evident Logging: A High-Performance, Co-Designed Auditing System"
+  authors:
+    - family-names: Zhao
+      given-names: Rui
+    - family-names: Shoaib
+      given-names: Muhammad
+    - family-names: Hoang
+      given-names: Viet Tung
+    - family-names: Hassan
+      given-names: Wajih Ul
+  collection-title: "Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security (CCS '25)"
+  publisher:
+    name: ACM
+  year: 2025
+  start: 2624
+  end: 2638
+  doi: "10.1145/3719027.3765024"

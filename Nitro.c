@@ -1,3 +1,11 @@
+// SPDX-License-Identifier: GPL-2.0-only OR MIT
+// Copyright (c) 2025 Rui Zhao and Wajih Ul Hassan
+//
+// This eBPF program calls GPL-only kernel helpers (bpf_probe_read,
+// bpf_probe_read_user_str), so it is dual-licensed and declares a
+// GPL-compatible license to the kernel. BCC turns this into "Dual MIT/GPL".
+#define BPF_LICENSE Dual MIT/GPL
+
 #include <uapi/asm-generic/siginfo.h>
 #include <uapi/asm-generic/statfs.h>
 #include <uapi/asm-generic/mman.h>
@@ -20,6 +28,9 @@
 #include "Nitro.h"
 
 #define ROTL(x, b) (u32)(((x) >> (32 - (b))) | ( (x) << (b)))
+
+/* Pack PROT_READ/PROT_WRITE/PROT_EXEC into 3 bits: R=4, W=2, X=1. */
+#define PACK_PROT(p) ((((p) & PROT_READ) ? 4 : 0) | (((p) & PROT_WRITE) ? 2 : 0) | (((p) & PROT_EXEC) ? 1 : 0))
 
 
 static int gettid() {
@@ -1264,14 +1275,11 @@ sendto_enter_out:
 
 TRACEPOINT_PROBE(syscalls, sys_enter_mprotect)
 {
-    int mmap_imp = (args->prot & PROT_EXEC);
-    if (!mmap_imp) return 0;
+    /* Only executable protection changes are logged. */
+    if (!(args->prot & PROT_EXEC)) return 0;
     int z=0;
     u32 pid = bpf_get_current_pid_tgid();
-    long prot = args->prot;
-    prot = (((prot & PROT_READ) !=0) << 2) |
-         (((prot & PROT_WRITE)!=0) << 1) |
-         ((prot & PROT_EXEC) !=0);
+    long prot = PACK_PROT(args->prot);
 	struct per_syscall *s = per_syscall.lookup(&z);
 
 	if (s != NULL){
@@ -1293,18 +1301,12 @@ mprotect_enter_out:
 
 TRACEPOINT_PROBE(syscalls, sys_enter_mmap)
 {
-    int file_backed = ((args->fd >= 0) && !(args->flags & MAP_ANONYMOUS));
-    int exec_perm = (args->prot & PROT_EXEC);
-    int mmap_imp = file_backed || exec_perm;
-
-    if (!mmap_imp) return 0;
+    /* Skip mappings that are neither executable nor file-backed. */
+    if (!(args->prot & PROT_EXEC) && (args->fd < 0 || (args->flags & MAP_ANONYMOUS))) return 0;
     int z=0;
     u32 pid = bpf_get_current_pid_tgid();
 	struct per_syscall *s = per_syscall.lookup(&z);
-	long prot = args->prot;
-    prot = (((prot & PROT_READ) !=0) << 2) |
-         (((prot & PROT_WRITE)!=0) << 1) |
-         ((prot & PROT_EXEC) !=0);
+	long prot = PACK_PROT(args->prot);
 
     long flags = args->flags;
 

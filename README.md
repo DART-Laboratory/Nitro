@@ -191,7 +191,7 @@ This setting works well for most scenarios.
 
 Running Nitro-R:
 
-1. Open Nitro.py, and go to line 28.
+1. Open Nitro.py and find the line that loads the eBPF source.
 2. Replace:
 ```python
 BPF_SOURCE_CODE = open('Nitro.c', 'rb').read().decode()
@@ -204,4 +204,9 @@ BPF_SOURCE_CODE = open('Nitro-R.c', 'rb').read().decode()
 
 ### 📄 License
 
-Nitro is licensed under the GNU General Public License v3.0 (GPLv3).
+Nitro is released under the [MIT License](./LICENSE).
+
+- **eBPF programs** (`Nitro.c`, `Nitro-R.c`, `Nitro.h`, `Nitro-R.h`) are dual-licensed under `GPL-2.0-only OR MIT` ([GPL-2.0 text](./LICENSES/GPL-2.0-only.txt)), so you may use them under either license. They call GPL-only kernel helpers, so they declare the GPL-compatible license string `Dual MIT/GPL` to the kernel.
+- **Third-party benchmark code and data** under `eval/`, as well as `bcc_install.sh`, are not covered by Nitro's license and keep their original licenses (eAudit: GPL-3.0-or-later; lmbench, PostMark, and the httperf web content: see [eval/THIRD_PARTY.md](./eval/THIRD_PARTY.md)).
+- The Nitro logo (`logo.png`, `logo.pptx`) is not covered by the MIT License. It was made with Canva and contains third-party design elements and the Lovelo typeface.
+- Versions of this repository up to commit `9b1ee5f` (October 2025) stated that Nitro was licensed under GPLv3. That grant is not revoked: Nitro's own code obtained from those versions may continue to be used under GPLv3. Third-party files in `eval/` were always under their own licenses.

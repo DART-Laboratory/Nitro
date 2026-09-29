@@ -1,4 +1,8 @@
 #!/bin/bash
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Adapted from eAudit's eval/run_httperf (https://github.com/seclab-stonybrook/eaudit),
+# (c) the eAudit authors. Modified by the Nitro authors in 2025 (server port
+# changed from 81 to 80). See THIRD_PARTY.md.
 if (( $# != 2 )); then
     echo "Usage: $0 <number_of_parallel_tasks> <iterations>"
     exit
